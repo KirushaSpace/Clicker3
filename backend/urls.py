@@ -17,4 +17,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('boosts/', boosts, name='boosts'),
     path('boost/<int:pk>/', lonely_boost, name='boost'),
+    path('update_coins/', views.update_coins),
+    path('core/', views.get_core),
 ]
