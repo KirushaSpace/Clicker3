@@ -62,7 +62,7 @@ def call_click(request):
         Boost.objects.create(core=core, price=core.coins, power=core.level*2)
     core.save()
 
-    return Response({ 'core': CoreSerializer(core).data, 'is_levelup': is_levelup })
+    return Response({'core': CoreSerializer(core).data, 'is_levelup': is_levelup})
 
 
 @login_required
@@ -101,11 +101,10 @@ class BoostViewSet(viewsets.ModelViewSet):
 def update_coins(request):
     coins = request.data['current_coins']  # Значение current_coins будем присылать в теле запроса.
     core = Core.objects.get(user=request.user)
-
-    is_levelup, boost_type = core.set_coins(
-        coins)  # Метод set_coins скоро добавим в модель. Добавили boost_type для создания буста.
-
+    is_levelup, boost_type = core.set_coins(coins)
+    # Метод set_coins скоро добавим в модель. Добавили boost_type для создания буста.
     # Дальнейшая логика осталась прежней, как в call_click
+
     if is_levelup:
         Boost.objects.create(core=core, price=core.coins, power=core.level * 2,
                              type=boost_type)  # Создание буста. Добавили атрибут type.
@@ -117,7 +116,31 @@ def update_coins(request):
     })
 
 
+@api_view(['POST'])
+def update_damage(request):
+    damage = request.data['damage']
+    core = Core.objects.get(user=request.user)
+    hp = core.set_hp(damage)
+    return Response({
+        'core': CoreSerializer(core).data,
+        'hp': hp
+    })
+
+
 @api_view(['GET'])
 def get_core(request):
     core = Core.objects.get(user=request.user)
     return Response({'core': CoreSerializer(core).data})
+
+
+# @api_view(['GET'])
+# @login_required
+# def upgrade_hp(request):
+#     core = Core.objects.get(user=request.user)
+#     is_levelup = core.damage # Труе если буст создался
+#     if is_levelup:
+#         Boost.objects.create(core=core, price=core.coins, power=core.level*2)
+#         Core.objects.create(core=core, damage=core.damage)
+#     core.save()
+#
+#     return Response({ 'core': CoreSerializer(core).data, 'is_levelup': is_levelup })

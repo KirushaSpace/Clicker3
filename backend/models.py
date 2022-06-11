@@ -11,6 +11,11 @@ class Core(models.Model):
     auto_click_power = models.IntegerField(default=0)
     level = models.IntegerField(default=1)  # От уровня зависит количество бустов
 
+    hp = models.IntegerField(default=10)
+    hp_boss = models.IntegerField(default=10)
+    damage = models.IntegerField(default=10)
+    level_enemy = models.IntegerField(default=1)
+
     # Метод для установки текущего количества монет пользователя.
     def set_coins(self, coins, commit=True):
         self.coins = coins  # Теперь мы просто присваиваем входящее значение монет.
@@ -19,11 +24,25 @@ class Core(models.Model):
 
         if is_levelupdated:
             self.level += 1
-
         if commit:
             self.save()
 
         return is_levelupdated, boost_type
+
+    def set_hp(self, damage, commit=True):
+        self.damage = damage
+        is_next_hp = self.is_next_hp()
+        if is_next_hp:
+            self.level_enemy += 1
+            self.hp = self.calculate_next_hp_enemy()
+            self.damage = self.hp
+        if commit:
+            self.save()
+        if self.level_enemy % 10 == 0:
+            self.hp_boss = self.calculate_next_hp_boss()
+            self.save()
+            return self.hp_boss
+        return self.hp
 
     # Выделили проверку на повышение уровня в отдельный метод для чистоты кода.
     def is_levelup(self):
@@ -38,7 +57,19 @@ class Core(models.Model):
 
     # Поменяли название с check_level_price, потому что теперь так гораздо больше подходит по смыслу.
     def calculate_next_level_price(self):
-        return (self.level ** 2) * 10 * self.level
+        return (self.level ** 2) * 30 * self.level
+
+
+    def calculate_next_hp_boss(self):
+        return int(self.hp * 5)
+
+
+    def is_next_hp(self):
+        return self.damage <= 0
+
+
+    def calculate_next_hp_enemy(self):
+        return int(self.hp + self.hp // 4)
 
 
 class Boost(models.Model):
@@ -60,8 +91,9 @@ class Boost(models.Model):
         old_boost_stats = copy(self)
 
         self.level += 1
-        self.power *= 2
-        self.price *= self.price * BOOST_TYPE_VALUES[self.type]['price_scale'] # Умножаем ценник на константу.
+        if self.level % 10 == 0:
+            self.power = int(self.power * 2)
+        self.price = int(self.price * 0.6 * BOOST_TYPE_VALUES[self.type]['price_scale']) # Умножаем ценник на константу.
         self.save()
 
         return old_boost_stats, self

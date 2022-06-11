@@ -19,4 +19,6 @@ urlpatterns = [
     path('boost/<int:pk>/', lonely_boost, name='boost'),
     path('update_coins/', views.update_coins),
     path('core/', views.get_core),
+    path('update_damage/', views.update_damage),
+    # path('upgrade_hp/', views)
 ]

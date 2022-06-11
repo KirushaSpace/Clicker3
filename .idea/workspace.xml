@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d82a2fea-34c9-40a6-91ab-f52c6bda87eb" name="Changes" comment="3.6 я вернулся к этому дз">
+    <list default="true" id="d82a2fea-34c9-40a6-91ab-f52c6bda87eb" name="Changes" comment="3.7 все сделано">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clicker3/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clicker3/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/serilazers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/index.js" afterDir="false" />
@@ -27,6 +29,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="2AONkj4pq1r0SEzUuv5ChW22XtD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -82,7 +92,8 @@
       <option name="presentableId" value="Default" />
       <updated>1654876816737</updated>
       <workItem from="1654876844687" duration="623000" />
-      <workItem from="1654877592061" duration="2250000" />
+      <workItem from="1654877592061" duration="14525000" />
+      <workItem from="1654933025043" duration="11743000" />
     </task>
     <task id="LOCAL-00001" summary="снова по новой">
       <created>1654877247721</created>
@@ -98,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654878354818</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="3.7 все сделано">
+      <created>1654879910494</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879910494</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +137,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="снова по новой" />
     <MESSAGE value="3.6 я вернулся к этому дз" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.6 я вернулся к этому дз" />
+    <MESSAGE value="3.7 все сделано" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.7 все сделано" />
   </component>
 </project>
