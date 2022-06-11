@@ -11,6 +11,7 @@ function GameSession() {
     this.hp = 10
     this.level = 1
     this.level_enemy = 1
+    this.click = 0
     /** Метод для инициализации данных. Данные подгружаются с бэкенда. */
     this.init = function() {
         getCore().then(core => {
@@ -78,9 +79,19 @@ let Game = new GameSession() // Экземпляр класса GameSession.
 
 /** Функция обработки клика пользователя на какаши. */
 function call_click() {
-    const kakashiNode = document.getElementById('kakashi')
-    // click_animation(kakashiNode, 50)
+    var cat = document.getElementById('click')
+    var imgs = new Array('/static/images/cat1.jpg', '/static/images/cat2.jpg')
+    var k = Game.click++
+    cat.src = imgs[k % 2]
+    click_animation(cat, 50)
+    playAudio()
     Game.add_damage(Game.click_power)
+}
+
+function playAudio() {
+    var myAudio = new Audio;
+    myAudio.src = "/static/audio/sound.mp3";
+    myAudio.play();
 }
 
 /** Функция для обновления количества монет, невероятной мощи и дружинных кликуш в HTML-элементах. */

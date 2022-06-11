@@ -14,7 +14,7 @@
 
         <div class="container">
             <div id='coins'>{{core.coins}}</div>
-            <button onclick="call_click()">Нажми меня</button>
+            <input type="image" src="/static/images/cat2.jpg" width="300" height="220" onclick="call_click()" id="click">
             <p>
                 Невероятная мощь клика: <span id="click_power">{{ core.click_power }}</span>
             </p>
@@ -22,11 +22,12 @@
                 Самостоятельная дружина кликеров. Чел: <span id="auto_click_power">{{ core.auto_click_power }}</span>
             </p>
             <p>
-                HP гниды: <span id="damage">{{ core.damage }}</span>/<span id="hp">{{ core.hp }}</span>
-            </p>
-            <p>
                 Уровень: <span id="level">{{ core.level }}</span>
             </p>
+            <p>
+                HP гниды: <span id="damage">{{ core.damage }}</span>/<span id="hp">{{ core.hp }}</span>
+            </p>
+
             <p>Уровень гниды: <span id="level_enemy"> {{ core.level_enemy }}</span></p>
         </div>
         <aside class="boosts" id="boosts">
