@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d82a2fea-34c9-40a6-91ab-f52c6bda87eb" name="Changes" comment="добавлена фишечка, надо убивать врагов">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="d82a2fea-34c9-40a6-91ab-f52c6bda87eb" name="Changes" comment="картиночка на кнопке" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +86,7 @@
       <updated>1654876816737</updated>
       <workItem from="1654876844687" duration="623000" />
       <workItem from="1654877592061" duration="14525000" />
-      <workItem from="1654933025043" duration="15605000" />
+      <workItem from="1654933025043" duration="15912000" />
     </task>
     <task id="LOCAL-00001" summary="снова по новой">
       <created>1654877247721</created>
@@ -120,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654945338252</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="картиночка на кнопке">
+      <created>1654949357533</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654949357533</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +146,7 @@
     <MESSAGE value="3.6 я вернулся к этому дз" />
     <MESSAGE value="3.7 все сделано" />
     <MESSAGE value="добавлена фишечка, надо убивать врагов" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавлена фишечка, надо убивать врагов" />
+    <MESSAGE value="картиночка на кнопке" />
+    <option name="LAST_COMMIT_MESSAGE" value="картиночка на кнопке" />
   </component>
 </project>
