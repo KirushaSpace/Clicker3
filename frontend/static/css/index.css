@@ -1,0 +1,151 @@
+.boost_0 {
+    background-color: #fff87c;
+    border-color: black;
+    border-style: solid;
+    font-size: 12px;
+    border-radius: 7px;
+    margin: 2px;
+    text-shadow: -1px 1px rgba(140, 140, 140, 0.64);
+    box-shadow: -2px 2px rgba(15,12,10,0.6);
+    font-family: "Arial Black";
+}
+
+.boost_1 {
+    background-color: #f6bc62;
+    border-color: black;
+    border-style: solid;
+    font-size: 12px;
+    border-radius: 7px;
+    margin: 2px;
+    text-shadow: -2px 2px rgba(140, 140, 140, 0.64);
+    box-shadow: -5px 5px rgba(15,12,10,0.6);
+    font-family: "Arial Black";
+}
+
+div {
+    float: left;
+    line-height: 13px;
+    font-size: 16px;
+    color: black;
+    margin-top: 60px;
+    width: 400px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.nav {
+    -webkit-text-stroke: 0.1px #b2b2b2;
+    display: flex;
+    background: #85641e;
+    color: #000000;
+    font-size: 20px;
+    height: 60px;
+    margin: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    text-shadow: -2px 2px rgba(140, 140, 140, 0.64);
+    box-shadow: -5px 5px rgba(15,12,10,0.6);
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 90%;
+    height: 85%;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 20px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 15px;
+    text-shadow: -2px 2px rgba(255, 255, 255, 0.62);
+    box-shadow: -5px 5px rgba(15,12,10,0.6);
+    background-image: url(/static/images/table.jpg);
+    text-decoration-color: azure;
+}
+
+.main_window {
+    color: #000000;
+    -webkit-text-stroke: 0.1px white;
+    margin: auto;
+    border-color: black;
+    border-radius: 15px;
+    border-style: solid;
+    width: 420px;
+    height: 580px;
+    padding-left: 0;
+    text-shadow: -2px 2px rgba(140, 140, 140, 0.64);
+    box-shadow: -5px 5px rgba(15,12,10,0.6);
+    background-color: rgba(154, 118, 53, 0.95);
+    background-image: url(/static/images/rtf.png);
+    background-size: 450px 380px;
+    background-repeat: no-repeat;
+}
+
+.info {
+    font-size: 25px;
+    margin: auto;
+    background-color: rgba(122, 88, 48);
+    border-style: solid;
+    border-radius: 15px;
+    border-color: black;
+    height: 300px;
+    width: 418px;
+    text-shadow: -2px 2px rgba(140, 140, 140, 0.64);
+    box-shadow: -5px 5px rgba(15,12,10,0.6);
+}
+
+.boosts {
+    margin: auto;
+    height: 580px;
+    width: 420px;
+    border-color: black;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: rgba(154, 118, 53, 0.95);
+    padding-left: 10px;
+    text-shadow: -2px 2px rgba(140, 140, 140, 0.64);
+    box-shadow: -5px 5px rgba(15,12,10,0.6);
+}
+
+div.coins {
+    font-size: 20px;
+    -webkit-text-stroke: 0.1px white;
+    border-style: solid;
+    border-radius: 15px;
+    margin: auto;
+    background-color: rgba(154, 118, 53, 0.95);
+    text-shadow: -2px 2px rgba(140, 140, 140, 0.64);
+    box-shadow: -5px 5px rgba(15,12,10,0.6);
+}
+
+.logout {
+    color: black;
+    text-decoration: none;
+}
+
+button.logout {
+    font-size: 20px;
+    box-shadow: -2px 2px rgba(0,0,0,0.49);
+    background-color: #fff87c;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
+html {
+    font-family: "Arial Black";
+    background-color: rgba(231,227,156,0.49);
+    text-shadow: -2px 2px rgba(140, 140, 140, 0.64);
+    box-shadow: -5px 5px rgba(15,12,10,0.6);
+}

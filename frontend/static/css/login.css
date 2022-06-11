@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+    font-size: 20px;
+    font-family: "Arial Black";
+    text-shadow: -1px 1px #363636;
+    background-color: rgba(110, 80, 42, 0.85);
+}
+
+div.form {
+    width: 370px;
+    height: 370px;
+    margin: 200px 0 0 36%;
+    border-radius: 15px;
+    border-color: black;
+    border-style: solid;
+    box-shadow: -3px 4px #595959;
+    background-color: #c99e31;
+}
+
+input[type=submit] {
+    width:170px;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: #f5ba3e;
+}
+input[type=text] {
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+input[type=password] {
+    width: 200px;
+    border-radius: 15px;
+    font-size: 20px;
+    height: 40px;
+}
+
+
+a.reg {
+    font-size: 20px;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    text-decoration: none;
+    color: black;
+    margin: auto;
+}

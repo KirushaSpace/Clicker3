@@ -80,12 +80,13 @@ let Game = new GameSession() // Экземпляр класса GameSession.
 /** Функция обработки клика пользователя на какаши. */
 function call_click() {
     var cat = document.getElementById('click')
-    var imgs = new Array('/static/images/cat1.jpg', '/static/images/cat2.jpg')
+    var imgs = new Array('/static/images/cat1.png', '/static/images/cat2.png')
     var k = Game.click++
     cat.src = imgs[k % 2]
     click_animation(cat, 50)
     playAudio()
     Game.add_damage(Game.click_power)
+
 }
 
 function playAudio() {
@@ -93,7 +94,6 @@ function playAudio() {
     myAudio.src = "/static/audio/sound.mp3";
     myAudio.play();
 }
-
 /** Функция для обновления количества монет, невероятной мощи и дружинных кликуш в HTML-элементах. */
 function render() {
     const coinsNode = document.getElementById('coins')
@@ -225,6 +225,8 @@ function get_boosts() {
 
 /** Функция покупки буста. */
 function buy_boost(boost_id) {
+    var boost = document.getElementById(`boost_${boost_id}`)
+    click_animation(boost, 50)
     const csrftoken = getCookie('csrftoken')
     return fetch(`/backend/boost/${boost_id}/`, {
         method: 'PUT',

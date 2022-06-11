@@ -6,32 +6,45 @@
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
 </head>
 <body>
-    <main class="app">
+    <header>
         <nav class="nav">
-            <h1>Привет, {{ user.username }}</h1>>
-            <a href="{% url 'logout' %}">Выйти</a>
+            <h1>Привет, {{ user.username }}</h1>
+            <button class="logout"><a class="logout" href="{% url 'logout' %}">Выйти</a></button>
         </nav>
+    </header>
 
-        <div class="container">
-            <div id='coins'>{{core.coins}}</div>
-            <input type="image" src="/static/images/cat2.jpg" width="300" height="220" onclick="call_click()" id="click">
+    <main class="app">
+        <div class="main_window">
+            <h1>Игра</h1>
+            <input type="image" src="/static/images/cat2.png" width="300" height="220" onclick="call_click()" id="click">
+            <div class="info">
+                <p>Уровень гниды: <span id="level_enemy"> {{ core.level_enemy }}</span></p>
+                <p>
+                <img src="/static/images/icon.png" width="30" height="30">
+                НР гниды: <span id="damage">{{ core.damage }}</span>/<span id="hp">{{ core.hp }}</span>
+                </p>
+                <p>
+                <img src="/static/images/dmg.png" width="30" height="30">
+                Сила удара: <span id="click_power">{{ core.click_power }}</span>
+                </p>
+                <p>
+                <img src="/static/images/mining.png" width="30" height="30">
+                Шахтеры. Чел: <span id="auto_click_power">{{ core.auto_click_power }}</span>
+                </p>
+            </div>
+        </div>
+        <div class="coins">
+            <h1>Персонаж</h1>
             <p>
-                Невероятная мощь клика: <span id="click_power">{{ core.click_power }}</span>
-            </p>
-            <p>
-                Самостоятельная дружина кликеров. Чел: <span id="auto_click_power">{{ core.auto_click_power }}</span>
+                <img src="/static/images/money.png" width="30" height="30">
+                Монетки: <span id="coins">{{core.coins}}</span>
             </p>
             <p>
                 Уровень: <span id="level">{{ core.level }}</span>
             </p>
-            <p>
-                HP гниды: <span id="damage">{{ core.damage }}</span>/<span id="hp">{{ core.hp }}</span>
-            </p>
-
-            <p>Уровень гниды: <span id="level_enemy"> {{ core.level_enemy }}</span></p>
         </div>
-        <aside class="boosts" id="boosts">
-            <h3>Бусты</h3>
+        <div class="boosts" id="boosts">
+            <h1>Бусты</h1>
             <div class="boosts-holder" id="boosts-holder">
                 {% for boost in boosts %}
                     <button class="boost_{{boost.type}}" id="boost_{{boost.id}}" onclick="buy_boost({{boost.id}})">
@@ -41,7 +54,7 @@
                     </button>
                 {% endfor %}
             </div>
-        </aside>
+        </div>
     </main>
 </body>
 </html>

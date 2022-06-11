@@ -21,7 +21,7 @@ class UserForm(forms.ModelForm):
     password_confirm = forms.CharField(
         min_length=3,
         max_length=20,
-        label='Подтверждение пароля',
+        label='Еще разок',
         widget=forms.PasswordInput(attrs={'placeholder': 'Вводи пароль ещё'}),
     )
 

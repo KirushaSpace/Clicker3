@@ -93,7 +93,7 @@ class Boost(models.Model):
         self.level += 1
         if self.level % 10 == 0:
             self.power = int(self.power * 2)
-        self.price = int(self.price * 0.6 * BOOST_TYPE_VALUES[self.type]['price_scale']) # Умножаем ценник на константу.
+        self.price = int(self.price * 0.9 * BOOST_TYPE_VALUES[self.type]['price_scale']) # Умножаем ценник на константу.
         self.save()
 
         return old_boost_stats, self

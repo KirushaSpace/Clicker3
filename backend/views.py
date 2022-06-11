@@ -62,7 +62,7 @@ def call_click(request):
         Boost.objects.create(core=core, price=core.coins, power=core.level*2)
     core.save()
 
-    return Response({'core': CoreSerializer(core).data, 'is_levelup': is_levelup})
+    return Response({ 'core': CoreSerializer(core).data, 'is_levelup': is_levelup })
 
 
 @login_required
